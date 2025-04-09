@@ -1,12 +1,12 @@
 import { useState } from "react";
+import blogPost from '../types/blogTypes';
 
 export default function BlogDisplay() {
-    const [date] = useState(new Date().toLocaleDateString());
   return (
     <article className="max-w-3xl mx-auto my-8 p-6 border rounded-lg shadow-md font-sans">
       <header className="mb-8 text-center">
-        <h1 className="text-4xl font-bold mb-2">Blog Post Title</h1>
-        <p className="text-sm text-gray-600">Posted on: {date}</p>
+        <h1 className="text-4xl font-bold mb-2">{blogPost.title}</h1>
+        <p className="text-sm text-gray-600">Posted on: {blogPost.date}</p>
       </header>
 
       <section className="leading-relaxed text-base mb-12">
@@ -19,6 +19,7 @@ export default function BlogDisplay() {
           convallis aliquam. Pellentesque porta ex vitae lorem suscipit
           venenatis.
         </p>
+        <br></br>
         <p>
           Nam id arcu vel purus porttitor iaculis ac sit amet mauris. Aenean
           quis arcu in mi fermentum porta non non massa. Fusce dapibus eros sem.
@@ -30,6 +31,7 @@ export default function BlogDisplay() {
           turpis ut condimentum dictum. Maecenas diam augue, placerat eu sapien
           in, pellentesque blandit lectus. Mauris vitae mi tellus.
         </p>
+        <br></br>
         <p>
           Aliquam ullamcorper eleifend dolor eget consectetur. Nulla nibh neque,
           consectetur sodales gravida eget, pulvinar ut est. Nunc ornare, justo
@@ -44,6 +46,7 @@ export default function BlogDisplay() {
           augue massa dignissim eros, sit amet semper tellus quam eget lacus.
           Donec non justo nunc. Vivamus pharetra scelerisque magna eget aliquet.
         </p>
+        <br></br>
         <p>
           In accumsan justo ac libero vulputate, quis pretium lacus
           sollicitudin. Donec molestie fringilla metus, at tristique leo sodales
@@ -56,6 +59,7 @@ export default function BlogDisplay() {
           vel ornare sit amet, vestibulum in neque. Curabitur pulvinar urna non
           hendrerit bibendum.
         </p>
+        <br></br>
         <p>
           Suspendisse tempor, nibh id mattis tincidunt, arcu metus condimentum
           nisi, eget vestibulum enim mi non neque. Mauris volutpat sapien sed
