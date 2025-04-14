@@ -1,9 +1,7 @@
-"use client";
-import { useState } from "react";
-import BlogDisplay from "./components/blogDisplay";
-import CreateBlog from "./components/createBlog";
+import LoginPage from "./components/loginPage";
 
 export default function Home() {
-  const [blogsExist, setBlogsExist] = useState(false);
-  return blogsExist ? <BlogDisplay/> : <CreateBlog/>;
+  return (
+    <LoginPage/>
+  )
 };
