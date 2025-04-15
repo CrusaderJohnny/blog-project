@@ -37,8 +37,14 @@ export default function ProfilePage() {
             </header>
             <div className="flex items-center gap-4 mb-4"> 
                 {user.photoURL && (
-                    <div className="shrink-0"> 
-                        <Image src={user.photoURL} alt="Profile" className="rounded-lg w-24 h-24 object-cover shadow-md" /> 
+                    <div className="shrink-0">
+                        <Image
+                            src={user.photoURL}
+                            alt="Profile"
+                            className="rounded-lg object-cover shadow-md" 
+                            width={96}
+                            height={96}
+                        />
                     </div>
                 )}
                 <div>
