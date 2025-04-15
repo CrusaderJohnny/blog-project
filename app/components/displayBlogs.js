@@ -45,14 +45,20 @@ export default function DisplayBlogs() {
         <article className="max-w-3xl mx-auto my-8 p-6 border rounded-lg shadow-md font-sans bg-gray-100">
             <header className="mb-8 text-center">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">Recent Blog Posts </h2> 
-                <div className='mt-2 flex justify-end'>
-                <Link 
-                href="blogs/create" 
-                className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded m-2"
-                >
-                    Create a Post!
-                </Link> 
-                </div>               
+                <div className='mt-2 flex justify-between'>
+                    <Link
+                        href="/"
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2"
+                    >
+                        Go Back Home
+                    </Link>
+                    <Link
+                        href="blogs/create"
+                        className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded m-2"
+                    >
+                        Create a Post!
+                    </Link>
+                </div>             
             </header>
             {posts.length > 0 ? (
                 <div className="space-y-4"> 

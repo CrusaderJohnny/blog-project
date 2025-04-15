@@ -20,6 +20,16 @@ export default function ProfilePage() {
         return null;
     }
 
+    const displayNameToShow = () => {
+        if (user.displayName) {
+            return user.displayName;
+        }
+        if (user.email) {
+            return user.email.split('@')[0];
+        }
+        return 'Not available';
+    };
+
     return (
         <article className="max-w-3xl mx-auto my-8 p-6 border rounded-lg shadow-md font-sans bg-gray-100">
             <header className="mb-6 text-center">
@@ -32,7 +42,7 @@ export default function ProfilePage() {
                     </div>
                 )}
                 <div>
-                    <p className="text-lg text-gray-800 mb-1">Display Name: {user.displayName || 'Not available'}</p>
+                    <p className="text-lg text-gray-800 mb-1">Display Name: {displayNameToShow()}</p>
                     <p className="text-lg text-gray-800 mb-1">Email: {user.email || 'Not available'}</p>
                 </div>
             </div>

@@ -2,9 +2,11 @@
 import React from 'react';
 import { useUserAuth } from '../_utils/auth-context';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function LoginPage() {
-    const { user, gitHubSignIn, firebaseSignOut } = useUserAuth();
+    const { user, gitHubSignIn, firebaseSignOut, emailSignIn } = useUserAuth();
+    const router = useRouter();
 
     const handleSignIn = async (signInFunction) => {
         try {
@@ -65,6 +67,12 @@ return (
             className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded m-2"
             >
                 Sign In with GitHub
+            </button>
+            <button
+            onClick={() => router.push('email')}
+            className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded m-2"
+            >
+                Sign In with Email
             </button>
         </div>
         )}
