@@ -27,16 +27,27 @@ export default function LoginPage() {
         } catch (error) {
             console.error('Firebase sign-out error:', error);
         }
-        };
+    };
+
+    const displayNameToShow = () => {
+        if (user.displayName) {
+            return user.displayName;
+        }
+        if (user.email) {
+            return user.email.split('@')[0];
+        }
+        return 'Not available';
+    };
+
 return (
     <div className="flex justify-center items-center h-screen flex-col">
         {user ? (
         <div className="text-center">
-            <p className="text-xl mb-4">Welcome, {user.displayName || 'User'}, {user.email}</p>
+            <p className="text-xl mb-4">Welcome, {displayNameToShow()}, {user.email}</p>
             {console.log("user object:", user)}
             <button
             onClick={handleSignOut}
-            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded m-2"
+            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded m-2 cursor-pointer"
             >
                 Sign Out
             </button>

@@ -68,10 +68,8 @@ export default function DisplayBlogs() {
                             <p className="text-gray-700 text-sm mb-1">Author: {post.author}</p> 
                             <p className="text-gray-800">{post.content.substring(0, 100)}...</p> 
                             <div className="mt-2 flex justify-end"> 
-                                <Link href={`/blogs/${post.id}`} passHref>
-                                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline text-sm"> 
+                                <Link href={`/blogs/${post.id}`} passHref className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-2">
                                         Read More
-                                    </button>
                                 </Link>
                             </div>
                         </div>

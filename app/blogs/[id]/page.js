@@ -58,7 +58,7 @@ export default function SingleBlogPage({ params }) {
             <div className="mt-8 text-center">
                 <button
                     onClick={() => router.back()}
-                    className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline cursor-pointer"
                 >
                     Back to Home
                 </button>
