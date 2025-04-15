@@ -31,7 +31,7 @@ export default function DisplayBlogs() {
         };
 
         fetchPosts();
-    }, [db]); 
+    }, []); 
 
     if (loading) {
         return <p className="text-center my-8">Loading blog posts...</p>;

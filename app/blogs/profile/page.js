@@ -1,5 +1,6 @@
 "use client";
 
+import Image from 'next/image';
 import React, {useEffect} from 'react';
 import { useUserAuth } from '@/app/_utils/auth-context';
 import { useRouter } from 'next/navigation';
@@ -27,7 +28,7 @@ export default function ProfilePage() {
             <div className="flex items-center gap-4 mb-4"> 
                 {user.photoURL && (
                     <div className="shrink-0"> 
-                        <img src={user.photoURL} alt="Profile" className="rounded-lg w-24 h-24 object-cover shadow-md" /> 
+                        <Image src={user.photoURL} alt="Profile" className="rounded-lg w-24 h-24 object-cover shadow-md" /> 
                     </div>
                 )}
                 <div>
